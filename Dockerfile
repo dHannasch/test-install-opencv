@@ -26,6 +26,5 @@ RUN apk add --no-cache python3-dev py3-pip py3-wheel git openssh-client \
     && pip install --no-cache-dir --no-build-isolation opencv-python \
     && apk del --no-cache .build-deps \
     && apk add --no-cache lapack blas openexr openjpeg libdc1394 ffmpeg-libs \
-    && python3 -c "import cv2" \
-    && . ./cleanup.sh
+    && python3 -c "import cv2"
 
