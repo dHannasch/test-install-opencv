@@ -1,0 +1,11 @@
+include:
+  - project: 'shell-bootstrap-scripts/shell-bootstrap-scripts'
+    file: 'build_with_kaniko.yaml'
+    ref: master
+
+build_for_gitlab_project_registry:
+  extends: .build_with_kaniko
+  variables:
+    SKIP_DOCKER_TAG_COMMIT_SHORT_SHA: 1
+    PATH_TO_DOCKERFILE: Dockerfile
+
